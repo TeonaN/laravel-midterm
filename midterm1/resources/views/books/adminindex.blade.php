@@ -49,10 +49,6 @@ tr:nth-child(even) {
 							<input type="hidden" name="id" value="{{$book->id }}">
 							<button>Delete</button>
 						</form>
-						{{-- <a href="{{ route('adminedit',["id"=>$post->id ]) }}">
-							Edit</a>
-					<a href="{{ route('adminshow',["id"=>$post->id ]) }}">
-							Show</a> --}}
 				</td>
 
 			</tr>

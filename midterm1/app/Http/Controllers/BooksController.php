@@ -61,8 +61,8 @@ class BooksController extends Controller
      */
     public function show($id)
     {
-        $books=Books::where("id",$id)->firstOrFail();
-        return view("books.show");
+        $book=Books::where("id",$id)->firstOrFail();
+        return view("books.show",["book"=>$book]);
 
     }
 
