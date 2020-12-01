@@ -47,7 +47,6 @@ Route::post("/categories/categoriesupdate","CategoriesController@update")->name(
 
 Route::post("/categories/categoriesdelete","CategoriesController@destroy")->name("categoriesdelete");
 
-// Route::get("/categories/categoriesshow/{id}","CategoriesController@show")->name("categoriesshow");
 
 
 Route::get('/categories', 'CategoriesController@index')->name('categories');

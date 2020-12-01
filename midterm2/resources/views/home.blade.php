@@ -16,7 +16,7 @@
                     <div class="flex-container row " >
 
             @foreach ($products as $product)
-                    @if($loop->index < 10)
+                    @if($loop->index < 8)
                                 <div class="flex-content col-md-6 card " style="  margin-top: 30px; margin-bottom: 30px; ">
 
 
@@ -41,8 +41,9 @@
                     <form action="{{ route('productsdelete') }}" method="POST">
                             @csrf
                             <input type="hidden" name="id" value="{{$product->id }}">
-                            <button type="button" class="btn btn-danger">წაშლა</button>
-                        </form> 
+                            <button>Delete</button>
+                        </form>
+                
                             
                         @endif
 
@@ -57,12 +58,16 @@
 
 
                             </div>
-                                                            @if(Auth::user()->id  == $product->user_id)
-
-<a href="{{ route('productscreate') }}" type="button" class="btn btn-primary">
+{{--                                                             @if(Auth::user()->id  == $product->user_id)
+ --}}
+ @guest
+ @else
+ <a href="{{ route('productscreate') }}" type="button" class="btn btn-primary">
                             პროდუქციის შექმნა</a>   
-                             @endif
+ @endguest
 
+{{--                              @endif
+ --}}
                 </div>
             </div>
         </div>
